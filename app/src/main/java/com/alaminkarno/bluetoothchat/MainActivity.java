@@ -106,12 +106,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void enableBluetooth() {
-        if(bluetoothAdapter.isEnabled()){
-            Toast.makeText(getApplicationContext(), "Bluetooth already on.", Toast.LENGTH_SHORT).show();
-        }
-        else {
+        if(!bluetoothAdapter.isEnabled()){
             bluetoothAdapter.enable();
             Toast.makeText(getApplicationContext(), "Bluetooth turn on.", Toast.LENGTH_SHORT).show();
+        }
+
+        if(bluetoothAdapter.getScanMode() != BluetoothAdapter.SCAN_MODE_CONNECTABLE_DISCOVERABLE) {
+            Intent discoverIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE);
+            discoverIntent.putExtra(BluetoothAdapter.EXTRA_DISCOVERABLE_DURATION,300);
+            startActivity(discoverIntent);
         }
     }
 }
