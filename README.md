@@ -1,5 +1,8 @@
-# Bluetooth-Chat-App
+# Bluetooth Chat App
 This is an Android App (Native) where I have made an Bluetooth control chatting system where people can chat with their friends using Bluetooth and free of cost.
+
+# ANDROID APP DEVELOPMENT COURSE (BANGLA):
+Link: https://instructory.net/courses/android-app-development-course-basic-to-advanced-2
 
 ## Screenshots:
 
