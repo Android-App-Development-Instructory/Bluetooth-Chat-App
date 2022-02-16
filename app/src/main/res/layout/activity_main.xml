@@ -22,16 +22,17 @@
         android:padding="5dp">
 
         <EditText
+            android:id="@+id/smsEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:layout_toStartOf="@id/sendMessage"
+            android:layout_toStartOf="@id/sendMessageBTN"
             android:hint="Type your message..."
             android:minHeight="48dp"
             android:inputType="text"/>
 
         <Button
-            android:id="@+id/sendMessage"
+            android:id="@+id/sendMessageBTN"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:text="SEND"
